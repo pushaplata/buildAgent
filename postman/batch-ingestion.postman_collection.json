@@ -1,0 +1,154 @@
+{
+  "info": {
+    "name": "Resume Batch Ingestion",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": "Batch resume ingestion workflow for processing PDF files in the Resumes folder in chunks of 5 or 10."
+  },
+  "item": [
+    {
+      "name": "Batch Ingest - Run next 5",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"batchSize\": 5,\n  \"folderPath\": \"Resumes\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/v1/resume/batch-ingest",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "v1",
+            "resume",
+            "batch-ingest"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Batch Ingest - Run range with offset",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"batchSize\": 10,\n  \"offset\": 10,\n  \"folderPath\": \"Resumes\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/v1/resume/batch-ingest",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "v1",
+            "resume",
+            "batch-ingest"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Batch Ingest - Run next 10",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"batchSize\": 10,\n  \"folderPath\": \"Resumes\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/v1/resume/batch-ingest",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "v1",
+            "resume",
+            "batch-ingest"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Batch Ingest - Run next 10 again",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"batchSize\": 10,\n  \"folderPath\": \"Resumes\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/v1/resume/batch-ingest",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "v1",
+            "resume",
+            "batch-ingest"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Batch Ingest - Continue until complete",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"batchSize\": 10,\n  \"folderPath\": \"Resumes\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/v1/resume/batch-ingest",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "v1",
+            "resume",
+            "batch-ingest"
+          ]
+        }
+      }
+    }
+  ]
+}
